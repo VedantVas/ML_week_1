@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Fundamentals</title>
+    <!-- Use Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* slate-900 */
+            color: #e2e8f0; /* slate-200 */
+        }
+        .container {
+            max-width: 900px;
+        }
+        .card {
+            background-color: #1e293b; /* slate-800 */
+        }
+        .accent-text {
+            color: #6ee7b7; /* emerald-400 */
+        }
+        .header-title {
+            color: #94a3b8; /* slate-400 */
+        }
+        .code-block {
+            background-color: #0c121e; /* A slightly darker shade for code blocks */
+            border-left: 4px solid #6366f1; /* indigo-500 */
+        }
+        .real-world-example {
+            border: 1px solid #6366f1; /* indigo-500 */
+            background-color: #1e293b; /* slate-800 */
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="container mx-auto">
+        <!-- Main Header -->
+        <header class="text-center mb-10 md:mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-2">
+                <span class="accent-text">📘</span> Week 1: Python Fundamentals
+            </h1>
+            <p class="text-lg header-title">
+                Explore the basics of Python programming with hands-on examples.
+            </p>
+        </header>
+
+        <!-- Learning Goals Section -->
+        <section class="mb-10 p-6 md:p-8 rounded-xl shadow-lg card">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white">
+                <span class="accent-text">🎯</span> Learning Goals
+            </h2>
+            <ul class="list-disc list-inside space-y-2 text-lg">
+                <li>Understand the Python programming basics.</li>
+                <li>Learn about variables, data types, operators, and control flow.</li>
+                <li>Write simple programs using loops and conditions.</li>
+                <li>Start building problem-solving skills.</li>
+            </ul>
+        </section>
+
+        <!-- Python Sections -->
+        <div class="space-y-10">
+            <!-- 1. Introduction to Python -->
+            <div class="card p-6 md:p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white">
+                    <span class="accent-text">🔹</span> 1. Introduction to Python
+                </h2>
+                
+                <p class="text-lg mb-4">
+                    Python is a high-level, interpreted language that is easy to read, write, and debug. Its wide usage in various fields from web development to data science makes it a powerful tool for any developer.
+                </p>
+                <div class="real-world-example p-4 rounded-lg">
+                    <p class="font-semibold text-white mb-2">💡 Real-World Example:</p>
+                    <p>Python is used in Google Search algorithms, Netflix recommendation systems, and NASA’s data analysis tools.</p>
+                </div>
+            </div>
+
+            <!-- 2. Variables and Data Types -->
+            <div class="card p-6 md:p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white">
+                    <span class="accent-text">🔹</span> 2. Variables and Data Types
+                </h2>
+                <p class="text-lg mb-4">
+                    Variables store data values. In Python, you don't need to explicitly declare their type.
+                </p>
+                <pre class="code-block p-4 rounded-lg mb-4 text-sm md:text-base"><code>name = "Vedant"
+age = 21
+height = 5.9
+is_student = True</code></pre>
+                <p class="text-lg mb-4">
+                    Python has several built-in data types:
+                </p>
+                <ul class="list-disc list-inside space-y-1 text-lg">
+                    <li><strong class="text-white">int</strong> → Whole numbers (10)</li>
+                    <li><strong class="text-white">float</strong> → Decimal numbers (3.14)</li>
+                    <li><strong class="text-white">str</strong> → Text ("Hello")</li>
+                    <li><strong class="text-white">bool</strong> → Boolean values (True, False)</li>
+                </ul>
+                <div class="real-world-example p-4 mt-4 rounded-lg">
+                    <p class="font-semibold text-white mb-2">💡 Real-World Example:</p>
+                    <p>Storing student information in a university database: <code class="bg-transparent text-white">name</code> (str), <code class="bg-transparent text-white">age</code> (int), <code class="bg-transparent text-white">GPA</code> (float), <code class="bg-transparent text-white">scholarship status</code> (bool).</p>
+                </div>
+            </div>
+
+            <!-- 3. Operators -->
+            <div class="card p-6 md:p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white">
+                    <span class="accent-text">🔹</span> 3. Operators
+                </h2>
+                <p class="text-lg mb-4">
+                    Operators perform operations on variables and values. Python supports a wide range of operators, including arithmetic, comparison, and logical.
+                </p>
+                <pre class="code-block p-4 rounded-lg mb-4 text-sm md:text-base"><code>a, b = 10, 3
+print(a + b)   # 13
+print(a ** b)  # 1000 (10^3)
+print(a > b)   # True</code></pre>
+                <div class="real-world-example p-4 mt-4 rounded-lg">
+                    <p class="font-semibold text-white mb-2">💡 Real-World Example:</p>
+                    <p>An e-commerce app calculates the total price of items in a cart (arithmetic) and applies a discount if the total is greater than 500 (comparison).</p>
+                </div>
+            </div>
+            
+            <!-- 4. Control Flow -->
+            <div class="card p-6 md:p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white">
+                    <span class="accent-text">🔹</span> 4. Control Flow (Decision Making)
+                </h2>
+                <p class="text-lg mb-4">
+                    Control flow statements execute code based on conditions. The most common is the <code class="bg-transparent text-white">if-elif-else</code> block.
+                </p>
+                <pre class="code-block p-4 rounded-lg mb-4 text-sm md:text-base"><code>marks = 72
+if marks >= 90:
+    print("Grade A")
+elif marks >= 60:
+    print("Grade B")
+else:
+    print("Grade C")</code></pre>
+                <div class="real-world-example p-4 mt-4 rounded-lg">
+                    <p class="font-semibold text-white mb-2">💡 Real-World Example:</p>
+                    <p>An ATM machine checks if your balance is greater than or equal to the withdrawal amount to allow the transaction.</p>
+                </div>
+            </div>
+
+            <!-- 5. Loops -->
+            <div class="card p-6 md:p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white">
+                    <span class="accent-text">🔹</span> 5. Loops
+                </h2>
+                <p class="text-lg mb-4">
+                    Loops are used to execute a block of code repeatedly. Python has <code class="bg-transparent text-white">for</code> and <code class="bg-transparent text-white">while</code> loops.
+                </p>
+                <pre class="code-block p-4 rounded-lg mb-4 text-sm md:text-base"><code># For Loop
+for i in range(5):
+    print("Hello", i)
+
+# While Loop
+n = 5
+while n > 0:
+    print(n)
+    n -= 1</code></pre>
+                <div class="real-world-example p-4 mt-4 rounded-lg">
+                    <p class="font-semibold text-white mb-2">💡 Real-World Example:</p>
+                    <p>A <code class="bg-transparent text-white">for</code> loop can send bulk emails to a list of students, while a <code class="bg-transparent text-white">while</code> loop can repeatedly ask for a password until the correct one is entered.</p>
+                </div>
+            </div>
+            
+            <!-- 6. Input/Output -->
+            <div class="card p-6 md:p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white">
+                    <span class="accent-text">🔹</span> 6. Input/Output
+                </h2>
+                <p class="text-lg mb-4">
+                    The <code class="bg-transparent text-white">input()</code> function gets user input, and <code class="bg-transparent text-white">print()</code> displays output.
+                </p>
+                <pre class="code-block p-4 rounded-lg mb-4 text-sm md:text-base"><code>name = input("Enter your name: ")
+print("Welcome,", name)</code></pre>
+                <div class="real-world-example p-4 mt-4 rounded-lg">
+                    <p class="font-semibold text-white mb-2">💡 Real-World Example:</p>
+                    <p>Online forms ask users for details and then store them in a database.</p>
+                </div>
+            </div>
+            
+            <!-- 7. Type Casting -->
+            <div class="card p-6 md:p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white">
+                    <span class="accent-text">🔹</span> 7. Type Casting
+                </h2>
+                <p class="text-lg mb-4">
+                    Type casting allows you to convert a variable from one data type to another.
+                </p>
+                <pre class="code-block p-4 rounded-lg mb-4 text-sm md:text-base"><code>x = "100"
+y = int(x)  # Convert string to integer
+print(y + 10)  # Output: 110</code></pre>
+                <div class="real-world-example p-4 mt-4 rounded-lg">
+                    <p class="font-semibold text-white mb-2">💡 Real-World Example:</p>
+                    <p>Data cleaning in Machine Learning often requires converting string numbers like <code class="bg-transparent text-white">"123"</code> into integers to perform calculations.</p>
+                </div>
+            </div>
+
+            <!-- 8. Comments -->
+            <div class="card p-6 md:p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white">
+                    <span class="accent-text">🔹</span> 8. Comments & Documentation
+                </h2>
+                <p class="text-lg mb-4">
+                    Comments are notes that are ignored by the Python interpreter. They are crucial for making your code readable.
+                </p>
+                <pre class="code-block p-4 rounded-lg mb-4 text-sm md:text-base"><code># This is a single-line comment
+
+"""
+This is a
+multi-line comment
+"""</code></pre>
+                <div class="real-world-example p-4 mt-4 rounded-lg">
+                    <p class="font-semibold text-white mb-2">💡 Real-World Example:</p>
+                    <p>Comments help developers working on a team to understand each other’s code and collaborate effectively.</p>
+                </div>
+            </div>
+
+            <!-- Interactive Mini Example -->
+            <div class="card p-6 md:p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white">
+                    <span class="accent-text">🛠️</span> Mini Example Program
+                </h2>
+                <p class="text-lg mb-4">
+                    Problem: Write a program to check whether a number is even or odd.
+                </p>
+                <pre class="code-block p-4 rounded-lg mb-4 text-sm md:text-base"><code>num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print("Even Number")
+else:
+    print("Odd Number")</code></pre>
+                <!-- New input and button area -->
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 mb-4">
+                    <input type="number" id="num-input" placeholder="Enter a number" class="p-3 rounded-lg w-full md:w-auto bg-slate-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <button id="run-button" onclick="runMiniExample()" class="w-full md:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition-colors duration-300 transform hover:scale-105 shadow-md">
+                        Check Number
+                    </button>
+                </div>
+                <!-- Output Display Area -->
+                <div id="output-area" class="mt-6 p-4 rounded-lg code-block">
+                    <p id="output-text" class="text-lg">Result will appear here.</p>
+                </div>
+            </div>
+
+            <!-- New Practice Questions Section -->
+            <div class="card p-6 md:p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white">
+                    <span class="accent-text">📝</span> Practice Questions – Week 1 (Python Fundamentals)
+                </h2>
+
+                <!-- Level 1 -->
+                <div class="mb-6">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-2 text-white">
+                        🔹 Level 1: Beginner
+                    </h3>
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>Write a program to take a user’s name and age as input and print a message showing how old they will be after 50 years.</li>
+                        <li>Write a program to print the multiplication table of 7 using a loop.</li>
+                        <li>Take 3 numbers as input and print the largest number.</li>
+                    </ul>
+                </div>
+
+                <!-- Level 2 -->
+                <div class="mb-6">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-2 text-white">
+                        🔹 Level 2: Intermediate
+                    </h3>
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>Write a program to calculate the sum of all numbers from 1 to 100 using a loop.</li>
+                        <li>Take marks of 5 subjects as input, calculate the average, and assign a grade:<ul class="list-disc list-inside ml-6 space-y-1">
+                                <li>Average ≥ 90 → Grade A</li>
+                                <li>60 ≤ Average < 90 → Grade B</li>
+                                <li>Else → Grade C</li>
+                            </ul>
+                        </li>
+                        <li>Write a program that asks the user for a number and checks if it is prime or not.</li>
+                    </ul>
+                </div>
+
+                <!-- Level 3 -->
+                <div class="mb-6">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-2 text-white">
+                        🔹 Level 3: Challenge
+                    </h3>
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>Write a program that asks the user to guess a number between 1 and 10. If correct, print "You win!". If wrong, keep asking until correct.</li>
+                        <li>Write a program to check if a given string is a palindrome (same forwards and backwards).</li>
+                        <li>Write a program to count how many vowels (a, e, i, o, u) are present in a given string.</li>
+                    </ul>
+                </div>
+
+                <!-- Mini Real-World Exercises -->
+                <div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-2 text-white">
+                        🔹 Mini Real-World Exercises
+                    </h3>
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>ATM Simulation: Take user balance as input. Ask for withdrawal amount. If balance is sufficient, subtract and print new balance. Else print "Insufficient Balance".</li>
+                        <li>Student Pass/Fail Checker: Take marks of a student as input. If marks ≥ 40, print "Pass". Else, print "Fail".</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Credits and Help Section -->
+            <div class="mt-10 pt-6 border-t border-slate-700 text-center space-y-2">
+                <p class="text-sm text-slate-400">
+                    Made by Vedant Vashishtha (ML Club Lead GFG Campus Body)
+                </p>
+                <p class="text-sm text-slate-400">
+                    For help, you can email me at <span class="text-emerald-400">vedantvashish@gmail.com</span> or DM me personally.
+                </p>
+            </div>
+
+        </div> <!-- End of space-y-10 -->
+    </div> <!-- End of container -->
+
+    <script>
+        // JavaScript for the interactive mini example
+        function runMiniExample() {
+            // Get the output display area and text element
+            const outputArea = document.getElementById('output-area');
+            const outputText = document.getElementById('output-text');
+            const numInput = document.getElementById('num-input');
+            
+            const inputValue = numInput.value.trim();
+
+            if (inputValue === "") {
+                outputText.textContent = "Please enter a number to check.";
+                outputArea.classList.remove('hidden');
+                return;
+            }
+
+            const num = parseInt(inputValue);
+
+            if (isNaN(num)) {
+                outputText.textContent = "Invalid input. Please enter a valid number.";
+                outputArea.classList.remove('hidden');
+                return;
+            }
+
+            // Check if the number is even or odd
+            if (num % 2 === 0) {
+                outputText.textContent = `The number ${num} is an Even Number.`;
+            } else {
+                outputText.textContent = `The number ${num} is an Odd Number.`;
+            }
+
+            // Ensure the output area is visible and reset animation class
+            outputArea.classList.remove('hidden');
+            outputArea.classList.remove('animate-pulse');
+            setTimeout(() => {
+                outputArea.classList.add('animate-pulse');
+            }, 50); // Small delay to ensure the animation re-runs
+        }
+    </script>
+</body>
+</html>
